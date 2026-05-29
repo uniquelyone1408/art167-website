@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Site header -->
+<header>
+
+    <h1>Contact the Artist</h1>
+
+    <!-- Primary navigation -->
+    <nav>
+    <ul>
+        <li><a class="nav-home" href="index.html"><i class="sprite sprite-home-icon"></i>Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="nav-work" href="work.html"><i class="sprite sprite-Work-icon"></i>Work</a></li>
+        <li><a class="nav-contact" href="contact.html"><i class="sprite sprite-Contact-icon"></i>Contact</a></li>
+    </ul>
+    </nav>
+
+</header>
+
+<!-- Main content -->
+<main>
+
+<section>
+
+    <h2>Contact Details</h2>
+    <p>Contact information will be added here.</p>
+
+</section>
+
+<!-- Contact form section -->
+<section>
+  <h2>Message Request Form</h2>
+  <p>I'd love to hear from you! Whether you're interested in face painting classes or just want to chat about a face painting design, fields marked "(required)" must be filled out.</p>
+
+  <form action="#" method="post">
+    <!-- Name -->
+    <p>
+      <label for="fullname">Full Name (required)</label><br>
+      <input type="text" id="fullname" name="fullname" required>
+      <br><small>Please provide your full first and last name.</small>
+    </p>
+
+    <!-- Email -->
+    <p>
+      <label for="email">Email (required)</label><br>
+      <input type="email" id="email" name="email" required>
+      <br><small>Example: name@example.com</small>
+    </p>
+
+    <!-- Phone -->
+    <p>
+      <label for="phone">Phone (optional)</label><br>
+      <input type="tel" id="phone" name="phone">
+      <br><small>If you include a phone number, use digits only.</small>
+    </p>
+
+    <!-- Reason (select) -->
+    <p>
+      <label for="reason">Reason for Contact (required)</label><br>
+      <select id="reason" name="reason" required>
+        <option value="">-- Select one --</option>
+        <option value="commission">Commission/Custom Art Request</option>
+        <option value="prints">Art Print Inquiry</option>
+        <option value="collab">Collaboration/Partnership</option>
+        <option value="question">General Question</option>
+        <option value="other">Other</option>
+      </select>
+    </p>
+
+    <!-- Preferred contact method (radio group) -->
+    <fieldset>
+      <legend>Preferred Contact Method (required)</legend>
+      <p>
+        <input type="radio" id="pref-email" name="preferred_contact" value="email" required>
+        <label for="pref-email">Email</label>
+      </p>
+      <p>
+        <input type="radio" id="pref-phone" name="preferred_contact" value="phone">
+        <label for="pref-phone">Phone</label>
+      </p>
+    </fieldset>
+
+    <!-- Newsletter checkbox -->
+    <p>
+      <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+      <label for="newsletter">Yes, send me updates (optional)</label>
+    </p>
+
+    <!-- Message -->
+    <p>
+      <label for="message">Message (required)</label><br>
+      <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+      <br><small>Tell me about your idea, timeline, or any details important to you.</small>
+    </p>
+
+    <!-- Buttons -->
+    <p>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </p>
+  </form>
+</section>
+
+</main>
+
+<!-- Site footer -->
+<footer>
+
+    <p>
+      <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="work.html">Work</a> | <a href="contact.html">Contact</a>
+    </p>
+
+    <p>&copy; 2026 Britney Kernell &amp; Associates &hearts;</p>
+
+</footer>
+
+</body>
+</html>
