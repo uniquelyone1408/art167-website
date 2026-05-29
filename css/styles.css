@@ -1,0 +1,260 @@
+/* ===== Week 7: Base styles ===== */
+* { box-sizing: border-box; }
+
+/* ===== Week 9: Typography ===== */
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2.3rem;
+    line-height: 1.15;
+    margin: 0 0 0.5rem 0;
+}
+
+h2 {
+    font-size: 1.65rem;
+    line-height: 1.25;
+    margin: 1.25rem 0 0.5rem 0;
+}
+
+p { margin: 0 0 1rem 0; }
+
+/* Navigation typography */
+header nav a {
+    font-weight: 600;
+}
+
+/* Sections */
+section {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+/* ===== Week 7: Navigation menu using floats ===== */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header nav li {
+    float: left;
+}
+
+header nav a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-right: 1px solid #ccc;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Keyboard focus */
+header nav a:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* ===== Week 7: Cascade demonstration ===== */
+p { line-height: 1.7; }
+.project p { line-height: 1.8; }
+
+/* ===== Week 7: Overlap + transparency ===== */
+.feature {
+    position: relative;
+    display: inline-block;
+}
+
+.feature img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.badge {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.highlight {
+    font-weight: bold;
+    background-color: #fff3a6;
+    padding: 0 4px;
+}
+
+/* ===== Week 11: Full-width hero background ===== */
+.hero {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 64px 16px;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../img/photo-2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+}
+
+.hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== Week 14: Simple animation ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply to hero text (you already have .hero-inner from Week 11) */
+.hero-inner {
+    animation: fadeInUp 500ms ease-out;
+}
+
+.hero h2 { margin-top: 0; }
+
+/* ===== Week 7: Footer ===== */
+footer {
+    border-top: 1px solid #ccc;
+    padding: 12px 16px;
+}
+
+/* ===== Week 11: Subtle footer gradient ===== */
+footer {
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.08));
+}
+
+/* ===== Week 11: Sprite icons (general) ===== */
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-Contact-icon {
+    width: 64px;
+    height: 64px;
+    background-position: -5px -5px;
+}
+
+.sprite-Work-icon {
+    width: 64px;
+    height: 64px;
+    background-position: -79px -5px;
+}
+
+.sprite-home-icon {
+    width: 64px;
+    height: 64px;
+    background-position: -153px -5px;
+}
+
+/* ===== Week 14: Projects Grid (lecture pattern) ===== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* Featured card spans taller on larger screens (desktop) */
+@media screen and (min-width: 850px) {
+    .projects .project.featured {
+        grid-row: span 2;
+        display: grid;
+        align-content: center;
+        font-size: 1.05rem;
+    }
+}
+
+/* ===== Week 14: Project card polish ===== */
+.projects .project {
+    border-radius: 12px;
+    box-shadow: 0 3px 11px rgba(0, 0, 0, 0.11);
+    transition: transform 190ms ease, box-shadow 190ms ease;
+}
+
+.projects .project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Week 14: Nav interaction feedback ===== */
+header nav a {
+    transition: background-color 170ms ease;
+}
+
+header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+header nav a:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* ===== Week 14: Submit button polish ===== */
+button[type="submit"] {
+    border-radius: 9px;
+    padding: 10px 15px;
+    transition: transform 170ms ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* ===== Week 14: Respect reduced motion preferences ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== Week 12-13: Responsive breakpoints ===== */
+@media (max-width: 900px) {
+ section { padding: 10px; }
+ header nav a { padding: 10px 12px; }
+ .projects { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+ header nav li { float: none; }
+
+ header nav a {
+     display: block;
+     border-right: none;
+     border-bottom: 1px solid #ccc;
+ }
+
+ .projects { grid-template-columns: 1fr; }
+}
